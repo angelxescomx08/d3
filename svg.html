@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+        path: 
+            M: Moverse a un punto sin dibujar una linea --- M20 21 --- este comando sería moverse a 
+            la coordenada (20,21) es importante el espacio
+
+            L: Dibuja una lina desde el punto anterior al que especifica L -- L18 15-- Este comando sería,
+            desde el punto actual dibuja una linea hasta el punto (18,15)
+
+            Z: Desde el punto actual ve al punto inicial dibujando una linea en el proceso (cerrar el path) 
+
+            H: Linea horizaontal
+
+            V: Linea vertical
+
+            C: Curva
+
+            S: Curva suave
+    -->
+    <svg width="600" height="600">
+
+        <rect x="0" y="0" fill="blue" width="100" height="100"></rect>
+
+        <circle cx="150" cy="50" fill="pink" r="50" stroke="red" stroke-width="5"></circle>
+
+        <line x1="0" y1="0" x2="600" y2="600" stroke="gray" stroke-width="5"></line>
+    </svg>
+
+    <svg width="600" height="600">
+        <path d="M 150 50 L 75 200 L 225 200 Z" fill="orange"></path>
+    </svg>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script>
+        const div = d3.selectAll("div");
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>
