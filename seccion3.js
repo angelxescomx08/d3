@@ -1,20 +1,25 @@
 //crear rectangulos
 const data = [
     {
-        width: 100,
+        width: 200,
         height: 100,
         fill: 'blue'
     },
     {
-        width: 200,
-        height: 200,
+        width: 100,
+        height: 60,
+        fill: 'red'
+    },
+    {
+        width: 50,
+        height: 30,
         fill: 'pink'
     },
 ]
 
 const svg = d3.select('div')
 
-const rect = svg.select('rect')
+const rect = svg.selectAll('rect')
     .data(data)
     .attr('width', (data, i, n) => {
         console.log(data, i, n);
